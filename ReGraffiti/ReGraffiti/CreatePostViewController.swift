@@ -13,11 +13,9 @@ import MobileCoreServices
 // get camera roll button to work
 
 class CreatePostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var locationText: UITextField!
     var newMedia: Bool?
-    var userImages = CreatePostViewController.getYourArt(key: "user-images")
-    var userLocations = CreatePostViewController.getYourArt(key: "user-locations")
     
     static func getYourArt(key: String) -> [Any] {
         let newPost = UserDefaults.standard.array(forKey: key)
@@ -27,35 +25,40 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             return newPost!
         }
     }
-
+    
+    @IBAction func createPost(_ sender: UIBarButtonItem) {
+        print("self.image.image != null is \(self.imageView.image != nil)")
+        print("self.location.text != null is \(self.locationText.text != nil)")
+        if self.locationText.text != nil && self.imageView.image != nil {
+            print("entered if")
+            let defaults = UserDefaults.standard
+            print(defaults)
+            var userImages = defaults.array(forKey: "user-images")! as [Any]
+            print(userImages)
+            var userLocation = defaults.array(forKey: "user-locations")! as [Any]
+            print(userLocation)
+            
+            userImages.insert(self.imageView.image!, at: 0)
+            userLocation.insert(self.locationText.text!, at: 0)
+            
+            print(userImages.count)
+            print(userLocation.count)
+            
+            defaults.set(userImages, forKey: "user-images")
+            defaults.set(userLocation, forKey: "user-locations")
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // buttons
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func createPost(_ sender: UIBarButtonItem) {
-        print(self.location.text!)
-        print("create clicked")
-        print(self.image != nil)
-        print(self.location != nil)
-        if self.image != nil && self.location != nil {
-            userImages.insert(self.image.image!, at: 0);
-            userLocations.insert(self.location.text!, at: 0)
-            self.dismiss(animated: true, completion: nil)
-        }
     }
     
     // Stuff related to the camera and street art image
@@ -107,7 +110,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             
-            self.image.image = image
+            self.imageView.image = image
             
             if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self,

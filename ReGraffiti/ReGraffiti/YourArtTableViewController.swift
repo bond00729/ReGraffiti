@@ -9,9 +9,8 @@
 import UIKit
 
 class YourArtTableViewController: UITableViewController {
-    var userImages = CreatePostViewController.getYourArt(key: "user-images")
-    var userLocations = CreatePostViewController.getYourArt(key: "user-locations")
-    
+    var yourArtImages = YourArtTableViewController.getYourArt(key: "user-images")
+    var yourArtLocation = YourArtTableViewController.getYourArt(key: "user-locations")
     
     static func getYourArt(key: String) -> [Any] {
         let yourArt = UserDefaults.standard.array(forKey: key)
@@ -31,8 +30,8 @@ class YourArtTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.userImages = CreatePostViewController.getYourArt(key: "user-images")
-        self.userLocations = CreatePostViewController.getYourArt(key: "user-locations")
+        self.yourArtImages = YourArtTableViewController.getYourArt(key: "user-images")
+        self.yourArtLocation = YourArtTableViewController.getYourArt(key: "user-locations")
         self.tableView.reloadData()
     }
     
@@ -48,18 +47,17 @@ class YourArtTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.userImages.count
+        return self.yourArtImages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "yourArtCell", for: indexPath) as! YourArtTableViewCell
         
-        let cellImage = self.userImages[indexPath.row] as! UIImage
-        let cellLocation = self.userLocations[indexPath.row] as! UILabel
+        let cellImage = self.yourArtImages[indexPath.row] as! UIImage
+        let cellLocation = self.yourArtLocation[indexPath.row] as! UILabel
         cell.artImage.image = cellImage
         cell.artLocation.text = cellLocation.text
-        // cell.artImage?.image = (currentCell as AnyObject).image // need to call whatever the api returns
         
         return cell
     }
@@ -74,7 +72,7 @@ class YourArtTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.userImages.remove(at: indexPath.row)
+            self.yourArtImages.remove(at: indexPath.row)
             
             var array = YourArtTableViewController.getYourArt(key: "art")
             array.remove(at: indexPath.row)
