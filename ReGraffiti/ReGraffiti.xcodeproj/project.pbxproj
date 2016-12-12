@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C98F1DA91DFCCC5F00FEF1ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */; };
+		C98F1DB01DFCCC5F00FEF1ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */; };
+		C98F1DB21DFCCC5F00FEF1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */; };
+		C98F1DB51DFCCC5F00FEF1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */; };
+		C98F1DC01DFCCC5F00FEF1ED /* ReGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */; };
+		C98F1DCB1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */; };
+		C98F1DDB1DFDFB0A00FEF1ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */; };
+		C98F1DDD1DFDFB4400FEF1ED /* AroundYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */; };
+		C98F1DDF1DFDFB5900FEF1ED /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */; };
+		C98F1DE11DFDFB7400FEF1ED /* YourPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */; };
+		C98F1DE31DFE089400FEF1ED /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C98F1DBC1DFCCC5F00FEF1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98F1D9D1DFCCC5E00FEF1ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98F1DA41DFCCC5E00FEF1ED;
+			remoteInfo = ReGraffiti;
+		};
+		C98F1DC71DFCCC5F00FEF1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98F1D9D1DFCCC5E00FEF1ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98F1DA41DFCCC5E00FEF1ED;
+			remoteInfo = ReGraffiti;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C98F1DA51DFCCC5F00FEF1ED /* ReGraffiti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReGraffiti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C98F1DAF1DFCCC5F00FEF1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C98F1DB41DFCCC5F00FEF1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C98F1DB61DFCCC5F00FEF1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98F1DBB1DFCCC5F00FEF1ED /* ReGraffitiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReGraffitiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGraffitiTests.swift; sourceTree = "<group>"; };
+		C98F1DC11DFCCC5F00FEF1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98F1DC61DFCCC5F00FEF1ED /* ReGraffitiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReGraffitiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGraffitiUITests.swift; sourceTree = "<group>"; };
+		C98F1DCC1DFCCC5F00FEF1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundYouViewController.swift; sourceTree = "<group>"; };
+		C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourPostsViewController.swift; sourceTree = "<group>"; };
+		C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C98F1DA21DFCCC5E00FEF1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DB81DFCCC5F00FEF1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DC31DFCCC5F00FEF1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C98F1D9C1DFCCC5E00FEF1ED = {
+			isa = PBXGroup;
+			children = (
+				C98F1DA71DFCCC5F00FEF1ED /* ReGraffiti */,
+				C98F1DBE1DFCCC5F00FEF1ED /* ReGraffitiTests */,
+				C98F1DC91DFCCC5F00FEF1ED /* ReGraffitiUITests */,
+				C98F1DA61DFCCC5F00FEF1ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C98F1DA61DFCCC5F00FEF1ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C98F1DA51DFCCC5F00FEF1ED /* ReGraffiti.app */,
+				C98F1DBB1DFCCC5F00FEF1ED /* ReGraffitiTests.xctest */,
+				C98F1DC61DFCCC5F00FEF1ED /* ReGraffitiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C98F1DA71DFCCC5F00FEF1ED /* ReGraffiti */ = {
+			isa = PBXGroup;
+			children = (
+				C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */,
+				C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */,
+				C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */,
+				C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */,
+				C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */,
+				C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */,
+				C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */,
+				C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */,
+				C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */,
+				C98F1DB61DFCCC5F00FEF1ED /* Info.plist */,
+			);
+			path = ReGraffiti;
+			sourceTree = "<group>";
+		};
+		C98F1DBE1DFCCC5F00FEF1ED /* ReGraffitiTests */ = {
+			isa = PBXGroup;
+			children = (
+				C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */,
+				C98F1DC11DFCCC5F00FEF1ED /* Info.plist */,
+			);
+			path = ReGraffitiTests;
+			sourceTree = "<group>";
+		};
+		C98F1DC91DFCCC5F00FEF1ED /* ReGraffitiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */,
+				C98F1DCC1DFCCC5F00FEF1ED /* Info.plist */,
+			);
+			path = ReGraffitiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C98F1DA41DFCCC5E00FEF1ED /* ReGraffiti */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98F1DCF1DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffiti" */;
+			buildPhases = (
+				C98F1DA11DFCCC5E00FEF1ED /* Sources */,
+				C98F1DA21DFCCC5E00FEF1ED /* Frameworks */,
+				C98F1DA31DFCCC5E00FEF1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReGraffiti;
+			productName = ReGraffiti;
+			productReference = C98F1DA51DFCCC5F00FEF1ED /* ReGraffiti.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C98F1DBA1DFCCC5F00FEF1ED /* ReGraffitiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98F1DD21DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffitiTests" */;
+			buildPhases = (
+				C98F1DB71DFCCC5F00FEF1ED /* Sources */,
+				C98F1DB81DFCCC5F00FEF1ED /* Frameworks */,
+				C98F1DB91DFCCC5F00FEF1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C98F1DBD1DFCCC5F00FEF1ED /* PBXTargetDependency */,
+			);
+			name = ReGraffitiTests;
+			productName = ReGraffitiTests;
+			productReference = C98F1DBB1DFCCC5F00FEF1ED /* ReGraffitiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C98F1DC51DFCCC5F00FEF1ED /* ReGraffitiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98F1DD51DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffitiUITests" */;
+			buildPhases = (
+				C98F1DC21DFCCC5F00FEF1ED /* Sources */,
+				C98F1DC31DFCCC5F00FEF1ED /* Frameworks */,
+				C98F1DC41DFCCC5F00FEF1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C98F1DC81DFCCC5F00FEF1ED /* PBXTargetDependency */,
+			);
+			name = ReGraffitiUITests;
+			productName = ReGraffitiUITests;
+			productReference = C98F1DC61DFCCC5F00FEF1ED /* ReGraffitiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C98F1D9D1DFCCC5E00FEF1ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Matt Bond";
+				TargetAttributes = {
+					C98F1DA41DFCCC5E00FEF1ED = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ETMQ5VFD4P;
+						ProvisioningStyle = Automatic;
+					};
+					C98F1DBA1DFCCC5F00FEF1ED = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ETMQ5VFD4P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C98F1DA41DFCCC5E00FEF1ED;
+					};
+					C98F1DC51DFCCC5F00FEF1ED = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ETMQ5VFD4P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C98F1DA41DFCCC5E00FEF1ED;
+					};
+				};
+			};
+			buildConfigurationList = C98F1DA01DFCCC5E00FEF1ED /* Build configuration list for PBXProject "ReGraffiti" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C98F1D9C1DFCCC5E00FEF1ED;
+			productRefGroup = C98F1DA61DFCCC5F00FEF1ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C98F1DA41DFCCC5E00FEF1ED /* ReGraffiti */,
+				C98F1DBA1DFCCC5F00FEF1ED /* ReGraffitiTests */,
+				C98F1DC51DFCCC5F00FEF1ED /* ReGraffitiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C98F1DA31DFCCC5E00FEF1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98F1DB51DFCCC5F00FEF1ED /* LaunchScreen.storyboard in Resources */,
+				C98F1DB21DFCCC5F00FEF1ED /* Assets.xcassets in Resources */,
+				C98F1DB01DFCCC5F00FEF1ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DB91DFCCC5F00FEF1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DC41DFCCC5F00FEF1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C98F1DA11DFCCC5E00FEF1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98F1DDD1DFDFB4400FEF1ED /* AroundYouViewController.swift in Sources */,
+				C98F1DA91DFCCC5F00FEF1ED /* AppDelegate.swift in Sources */,
+				C98F1DDF1DFDFB5900FEF1ED /* FavoritesViewController.swift in Sources */,
+				C98F1DE11DFDFB7400FEF1ED /* YourPostsViewController.swift in Sources */,
+				C98F1DE31DFE089400FEF1ED /* CreatePostViewController.swift in Sources */,
+				C98F1DDB1DFDFB0A00FEF1ED /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DB71DFCCC5F00FEF1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98F1DC01DFCCC5F00FEF1ED /* ReGraffitiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98F1DC21DFCCC5F00FEF1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98F1DCB1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C98F1DBD1DFCCC5F00FEF1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98F1DA41DFCCC5E00FEF1ED /* ReGraffiti */;
+			targetProxy = C98F1DBC1DFCCC5F00FEF1ED /* PBXContainerItemProxy */;
+		};
+		C98F1DC81DFCCC5F00FEF1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98F1DA41DFCCC5E00FEF1ED /* ReGraffiti */;
+			targetProxy = C98F1DC71DFCCC5F00FEF1ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C98F1DAF1DFCCC5F00FEF1ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C98F1DB41DFCCC5F00FEF1ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C98F1DCD1DFCCC5F00FEF1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98F1DCE1DFCCC5F00FEF1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C98F1DD01DFCCC5F00FEF1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffiti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffiti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C98F1DD11DFCCC5F00FEF1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffiti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffiti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C98F1DD31DFCCC5F00FEF1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffitiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffitiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReGraffiti.app/ReGraffiti";
+			};
+			name = Debug;
+		};
+		C98F1DD41DFCCC5F00FEF1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffitiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffitiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReGraffiti.app/ReGraffiti";
+			};
+			name = Release;
+		};
+		C98F1DD61DFCCC5F00FEF1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffitiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffitiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReGraffiti;
+			};
+			name = Debug;
+		};
+		C98F1DD71DFCCC5F00FEF1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				INFOPLIST_FILE = ReGraffitiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffitiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReGraffiti;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C98F1DA01DFCCC5E00FEF1ED /* Build configuration list for PBXProject "ReGraffiti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98F1DCD1DFCCC5F00FEF1ED /* Debug */,
+				C98F1DCE1DFCCC5F00FEF1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98F1DCF1DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffiti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98F1DD01DFCCC5F00FEF1ED /* Debug */,
+				C98F1DD11DFCCC5F00FEF1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C98F1DD21DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffitiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98F1DD31DFCCC5F00FEF1ED /* Debug */,
+				C98F1DD41DFCCC5F00FEF1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C98F1DD51DFCCC5F00FEF1ED /* Build configuration list for PBXNativeTarget "ReGraffitiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98F1DD61DFCCC5F00FEF1ED /* Debug */,
+				C98F1DD71DFCCC5F00FEF1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C98F1D9D1DFCCC5E00FEF1ED /* Project object */;
+}
