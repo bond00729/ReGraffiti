@@ -1,5 +1,5 @@
 //
-//  YourPostsViewController.swift
+//  FavoriteArtViewController.swift
 //  ReGraffiti
 //
 //  Created by Matt Bond on 12/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YourPostsViewController: UIViewController {
+class FavoriteArtViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,6 @@ class YourPostsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
 
     /*
     // MARK: - Navigation

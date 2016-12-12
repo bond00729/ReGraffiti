@@ -9,9 +9,25 @@
 import UIKit
 import MobileCoreServices
 
+// might need to add mapkit to be able to access the users current location
+// get camera roll button to work
+
 class CreatePostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var location: UITextField!
     var newMedia: Bool?
+    var userImages = CreatePostViewController.getYourArt(key: "user-images")
+    var userLocations = CreatePostViewController.getYourArt(key: "user-locations")
+    
+    static func getYourArt(key: String) -> [Any] {
+        let newPost = UserDefaults.standard.array(forKey: key)
+        if newPost == nil {
+            return Array()
+        } else {
+            return newPost!
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +40,25 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    // buttons
+    
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func createPost(_ sender: UIBarButtonItem) {
+        print(self.location.text!)
+        print("create clicked")
+        print(self.image != nil)
+        print(self.location != nil)
+        if self.image != nil && self.location != nil {
+            userImages.insert(self.image.image!, at: 0);
+            userLocations.insert(self.location.text!, at: 0)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    // Stuff related to the camera and street art image
     
     // http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_iPhone_Camera_Application
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -56,8 +88,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             let imagePicker = UIImagePickerController()
             
             imagePicker.delegate = self
-            imagePicker.sourceType =
-                UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true,
@@ -66,6 +97,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    // http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_iPhone_Camera_Application
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
@@ -93,6 +125,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    // http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_iPhone_Camera_Application
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
         if error != nil {
@@ -109,6 +142,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    // http://www.techotopia.com/index.php/An_Example_Swift_iOS_8_iPhone_Camera_Application
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
