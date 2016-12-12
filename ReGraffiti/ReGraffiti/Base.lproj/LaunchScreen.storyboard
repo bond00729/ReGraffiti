@@ -21,12 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchbackground" translatesAutoresizingMaskIntoConstraints="NO" id="khs-h3-qW5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbackground" translatesAutoresizingMaskIntoConstraints="NO" id="khs-h3-qW5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="khs-h3-qW5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GkZ-h4-ogM"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="khs-h3-qW5" secondAttribute="bottom" id="RdD-tc-QH2"/>
+                            <constraint firstItem="khs-h3-qW5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="f3G-f6-03p"/>
+                            <constraint firstAttribute="trailing" secondItem="khs-h3-qW5" secondAttribute="trailing" id="qTa-sm-raV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
