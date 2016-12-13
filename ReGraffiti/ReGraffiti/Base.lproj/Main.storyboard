@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,18 +124,18 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VKE-65-qgx">
-                                <rect key="frame" x="16" y="84" width="343" height="421"/>
+                                <rect key="frame" x="16" y="86" width="343" height="418"/>
                                 <color key="backgroundColor" red="0.88366513319999995" green="0.88366513319999995" blue="0.88366513319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see art" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBg-2N-IJp">
-                                <rect key="frame" x="16" y="566.5" width="343" height="21"/>
+                                <rect key="frame" x="16" y="566" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press next" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjI-29-99C">
-                                <rect key="frame" x="16" y="526" width="343" height="21"/>
+                                <rect key="frame" x="16" y="525" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -144,7 +145,6 @@
                         <constraints>
                             <constraint firstItem="KjI-29-99C" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="05s-CH-x1J"/>
                             <constraint firstItem="KjI-29-99C" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="39m-BC-XN3"/>
-                            <constraint firstItem="VKE-65-qgx" firstAttribute="top" secondItem="Z0f-hu-17S" secondAttribute="bottom" constant="20" id="48G-B4-LEZ"/>
                             <constraint firstItem="VKE-65-qgx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="8OS-cl-tvt"/>
                             <constraint firstItem="UBg-2N-IJp" firstAttribute="top" secondItem="KjI-29-99C" secondAttribute="bottom" constant="20" id="AkV-aQ-Fa6"/>
                             <constraint firstItem="UBg-2N-IJp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="HMn-wc-w5q"/>
@@ -155,7 +155,7 @@
                             <constraint firstItem="Z0f-hu-17S" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="SuI-Kl-48m"/>
                             <constraint firstItem="UBg-2N-IJp" firstAttribute="top" secondItem="KjI-29-99C" secondAttribute="bottom" constant="20" id="Y8T-I9-ZAM"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="UBg-2N-IJp" secondAttribute="bottom" constant="31" id="YBf-W1-rih"/>
-                            <constraint firstItem="KjI-29-99C" firstAttribute="top" secondItem="VKE-65-qgx" secondAttribute="bottom" constant="21" id="e5R-xZ-B5T"/>
+                            <constraint firstItem="VKE-65-qgx" firstAttribute="top" secondItem="Z0f-hu-17S" secondAttribute="topMargin" constant="58" id="qC8-ma-6yP"/>
                             <constraint firstItem="UBg-2N-IJp" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="qsx-rF-Jtc"/>
                         </constraints>
                     </view>

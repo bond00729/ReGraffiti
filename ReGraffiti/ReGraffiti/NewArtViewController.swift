@@ -9,7 +9,7 @@
 import UIKit
 
 class NewArtViewController: UIViewController {
-    var current = 0
+    var current = -1
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var artImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
