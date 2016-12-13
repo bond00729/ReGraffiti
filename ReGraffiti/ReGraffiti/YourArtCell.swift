@@ -1,16 +1,17 @@
 //
-//  YourArtTableViewCell.swift
+//  YourArtCell.swift
 //  ReGraffiti
 //
-//  Created by Matt Bond on 12/11/16.
+//  Created by Matt Bond on 12/12/16.
 //  Copyright © 2016 Matt Bond. All rights reserved.
 //
 
 import UIKit
 
-class YourArtTableViewCell: UITableViewCell {
-    @IBOutlet weak var artImage: UIImageView!
-    @IBOutlet weak var artLocation: UILabel!
+class YourArtCell: UITableViewCell {
+    @IBOutlet weak var cellArt: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

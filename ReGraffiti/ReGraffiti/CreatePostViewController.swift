@@ -27,8 +27,8 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func createPost(_ sender: UIBarButtonItem) {
-        print("self.image.image != null is \(self.imageView.image != nil)")
-        print("self.location.text != null is \(self.locationText.text != nil)")
+        print("self.image.image != null is \(self.imageView.image != nil)") // REMOVE
+        print("self.location.text != null is \(self.locationText.text != nil)") // REMOVE
         if self.locationText.text != nil && self.imageView.image != nil {
             print("entered if")
             let defaults = UserDefaults.standard
