@@ -13,7 +13,6 @@ class FavoriteArtViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteArray = UserDefaults.standard.object(forKey: "favorites") as! [Int]
-        print(favoriteArray)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +23,6 @@ class FavoriteArtViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tb: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Count: " + String(favoriteArray.count))
         return favoriteArray.count
     }
     
@@ -44,6 +42,7 @@ class FavoriteArtViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        favoriteArray = UserDefaults.standard.object(forKey: "favorites") as! [Int]
         super.viewWillAppear(animated)        
         tb.reloadData()
     }
