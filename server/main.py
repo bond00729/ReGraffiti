@@ -3,6 +3,7 @@ import asyncio
 import sqlite3
 import json
 import base64
+import datetime
 import aiohttp.web
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
@@ -30,7 +31,7 @@ async def create_image_handler(request):
 
     cursor.execute('INSERT INTO images VALUES (?, ?, ?)', (
         request.url.query['location'],
-        request.url.query['date'],
+        str(datetime.datetime.now()),
         base64.b64decode(request.url.query['image'])
     ))
 
