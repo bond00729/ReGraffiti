@@ -70,8 +70,11 @@ class NewArtViewController: UIViewController {
         updateImage()
     }
     
+    @IBAction func openInAppleMaps(_ sender: AnyObject) {
+        
+    }
+    
     func updateImage() {
-        dateLabel.text = date[current]
         locationLabel.text = location[current]
         artImage.image = image[current]
     }
