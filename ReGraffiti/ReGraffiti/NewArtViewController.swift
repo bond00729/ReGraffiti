@@ -13,7 +13,7 @@ class NewArtViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var artImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
-    let urlString: String = "http://45.63.35.59:8081/new_images"
+    let urlString: String = "http://104.238.156.117:8081/new_images"
     var date: [String] = []
     var id: [Int] = []
     var location: [String] = []
@@ -45,7 +45,7 @@ class NewArtViewController: UIViewController {
                         self.location.insert(art["location"] as! String, at: 0)
                         self.id.insert(art["id"] as! Int, at: 0)
                         
-                        let imageURL = URL(string: "http://45.63.35.59:8081/image?id=\(self.id[0])")
+                        let imageURL = URL(string: "http://104.238.156.117:8081/image?id=\(self.id[0])")
                         let imageData = try Data(contentsOf: imageURL!)
                         let image = UIImage(data: imageData)!
                         self.image.insert(image, at: 0)
@@ -65,17 +65,15 @@ class NewArtViewController: UIViewController {
     @IBAction func nextImage(_ sender: UIBarButtonItem) {
         if current < date.count - 1 {
             current += 1;
+            updateImage()
         }
-
-        updateImage()
     }
 
     @IBAction func previousImage(_ sender: UIBarButtonItem) {
         if current > 0 {
             current -= 1;
+            updateImage()
         }
-
-        updateImage()
     }
     
     @IBAction func openInAppleMaps(_ sender: AnyObject) {

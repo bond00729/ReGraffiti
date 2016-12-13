@@ -9,10 +9,12 @@
 import UIKit
 
 class YourArtTableViewController: UITableViewController {
-
+    var myArtArray = UserDefaults.standard.array(forKey: "myArt")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +28,7 @@ class YourArtTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // CHANGE SO IT ISNT JUST ONE ROW.. should be NSUserDefault(key: myArt).count
+        // should be myArtArray.count
         return 1
     }
 
@@ -35,6 +37,8 @@ class YourArtTableViewController: UITableViewController {
         
 
         // Configure the cell...
+        // call JSON to get location/date using id from myArtArray
+        // call JSON to get image using id from myArtArray
         cell.dateLabel.text = "12/12/2016"
         cell.locationLabel.text = "Seattle"
         cell.cellArt.image = #imageLiteral(resourceName: "launchbackground")

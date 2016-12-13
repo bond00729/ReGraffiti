@@ -38,7 +38,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             print("imageString \(imageString)")
             print("locationText.text \(locationText.text!)")
             
-            let urlString = "http://45.63.35.59:8081/image?data=\(imageString!)&location=\(locationText.text!)"
+            let urlString = "http://104.238.156.117:8081/image?data=\(imageString!)&location=\(locationText.text!)"
             let url = URL(string: urlString)!
             print("testingURL is \(url)")
             
