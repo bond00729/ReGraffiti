@@ -33,10 +33,10 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         
         if self.locationText.text != nil && self.imageView.image != nil {
             let imageData = UIImageJPEGRepresentation(imageView.image!, 0.5)
-            let imageString = imageData?.base64EncodedString()
+            let imageString = imageData?.base64EncodedString(options: .init(rawValue: 0))
             let urlEncoded = imageString?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             
-            print("imageString \(urlEncoded)")
+            print("imageString \(urlEncoded!)")
             
             let urlString = "http://104.238.156.117:8081/create_image?image=\(urlEncoded!)&location=\(locationText.text!)"
             let url = URL(string: urlString)!
