@@ -13,11 +13,11 @@
 		C98F1DB51DFCCC5F00FEF1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */; };
 		C98F1DC01DFCCC5F00FEF1ED /* ReGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */; };
 		C98F1DCB1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */; };
-		C98F1DDB1DFDFB0A00FEF1ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */; };
-		C98F1DDD1DFDFB4400FEF1ED /* AroundYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */; };
-		C98F1DDF1DFDFB5900FEF1ED /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */; };
-		C98F1DE11DFDFB7400FEF1ED /* YourPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */; };
 		C98F1DE31DFE089400FEF1ED /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */; };
+		C98F1DE51DFE672A00FEF1ED /* NewArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE41DFE672A00FEF1ED /* NewArtViewController.swift */; };
+		C98F1DE71DFE673F00FEF1ED /* FavoriteArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE61DFE673F00FEF1ED /* FavoriteArtViewController.swift */; };
+		C9E054BE1DFF7562001392DA /* YourArtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E054BD1DFF7562001392DA /* YourArtTableViewController.swift */; };
+		C9E054C01DFF75E1001392DA /* YourArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E054BF1DFF75E1001392DA /* YourArtCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +50,11 @@
 		C98F1DC61DFCCC5F00FEF1ED /* ReGraffitiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReGraffitiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGraffitiUITests.swift; sourceTree = "<group>"; };
 		C98F1DCC1DFCCC5F00FEF1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundYouViewController.swift; sourceTree = "<group>"; };
-		C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourPostsViewController.swift; sourceTree = "<group>"; };
 		C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		C98F1DE41DFE672A00FEF1ED /* NewArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArtViewController.swift; sourceTree = "<group>"; };
+		C98F1DE61DFE673F00FEF1ED /* FavoriteArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteArtViewController.swift; sourceTree = "<group>"; };
+		C9E054BD1DFF7562001392DA /* YourArtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourArtTableViewController.swift; sourceTree = "<group>"; };
+		C9E054BF1DFF75E1001392DA /* YourArtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourArtCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */,
-				C98F1DDC1DFDFB4400FEF1ED /* AroundYouViewController.swift */,
-				C98F1DDE1DFDFB5900FEF1ED /* FavoritesViewController.swift */,
-				C98F1DE01DFDFB7400FEF1ED /* YourPostsViewController.swift */,
+				C98F1DE41DFE672A00FEF1ED /* NewArtViewController.swift */,
+				C98F1DE61DFE673F00FEF1ED /* FavoriteArtViewController.swift */,
+				C9E054BD1DFF7562001392DA /* YourArtTableViewController.swift */,
+				C9E054BF1DFF75E1001392DA /* YourArtCell.swift */,
 				C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */,
-				C98F1DDA1DFDFB0A00FEF1ED /* SettingsViewController.swift */,
 				C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */,
 				C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */,
 				C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */,
@@ -274,12 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98F1DDD1DFDFB4400FEF1ED /* AroundYouViewController.swift in Sources */,
+				C98F1DE71DFE673F00FEF1ED /* FavoriteArtViewController.swift in Sources */,
+				C9E054BE1DFF7562001392DA /* YourArtTableViewController.swift in Sources */,
 				C98F1DA91DFCCC5F00FEF1ED /* AppDelegate.swift in Sources */,
-				C98F1DDF1DFDFB5900FEF1ED /* FavoritesViewController.swift in Sources */,
-				C98F1DE11DFDFB7400FEF1ED /* YourPostsViewController.swift in Sources */,
+				C98F1DE51DFE672A00FEF1ED /* NewArtViewController.swift in Sources */,
+				C9E054C01DFF75E1001392DA /* YourArtCell.swift in Sources */,
 				C98F1DE31DFE089400FEF1ED /* CreatePostViewController.swift in Sources */,
-				C98F1DDB1DFDFB0A00FEF1ED /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
