@@ -32,7 +32,7 @@ class FavoriteArtViewController: UIViewController, UITableViewDataSource, UITabl
         
         let urlBaseLink = "http://104.238.156.117:8081/image?id="
         
-        if let url = NSURL(string: urlBaseLink + String(describing: favoriteArray?[n])) {
+        if let url = NSURL(string: urlBaseLink + String((favoriteArray?[n])!)) {
             if let data = NSData(contentsOf: url as URL) {
                 cell.favGraffitiImage.image = UIImage(data: data as Data)
             }
