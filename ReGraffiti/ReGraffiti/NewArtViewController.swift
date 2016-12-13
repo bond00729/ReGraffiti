@@ -19,8 +19,17 @@ class NewArtViewController: UIViewController {
     var location: [String] = []
     var image: [UIImage] = []
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Initialize the User Defaults for favorite graffitis
+        let defaults = UserDefaults.standard
+        if  defaults.object(forKey: "favorites") == nil {
+            let favoriteArray: [Int] = [Int]()
+            defaults.set(favoriteArray, forKey: "favorites")
+        }
 
         // Do any additional setup after loading the view.
         let url = URL(string: urlString)
@@ -56,7 +65,6 @@ class NewArtViewController: UIViewController {
     @IBAction func nextImage(_ sender: UIBarButtonItem) {
         if current < date.count - 1 {
             current += 1;
- 
         }
 
         updateImage()
@@ -77,5 +85,38 @@ class NewArtViewController: UIViewController {
     func updateImage() {
         locationLabel.text = location[current]
         artImage.image = image[current]
+        
+        let favoriteArray: [Int] = UserDefaults.standard.object(forKey: "favorites") as! [Int]
+        if favoriteArray.contains(id[current]) {
+            favoriteButton.setImage(UIImage(named: "favoriteFull"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(named: "favoriteEmpty"), for: .normal)
+        }
     }
+    
+    @IBAction func favoriteGraffiti(_ sender: UIButton) {
+        if current != -1 {
+            if sender.currentImage == UIImage(named: "favoriteEmpty") {
+                sender.setImage(UIImage(named: "favoriteFull"), for: .normal)
+                
+                let defaults = UserDefaults.standard
+                var favoriteArray:[Int] = defaults.object(forKey: "favorites") as! [Int]
+                favoriteArray.append(id[current])
+                defaults.set(favoriteArray, forKey: "favorites")
+            } else {
+                sender.setImage(UIImage(named: "favoriteEmpty"), for: .normal)
+                
+                let defaults = UserDefaults.standard
+                var favoriteArray:[Int] = defaults.object(forKey: "favorites") as! [Int]
+                for i in 0...favoriteArray.count-1 {
+                    if favoriteArray[i] == id[current] {
+                        favoriteArray.remove(at: i)
+                        break
+                    }
+                }
+                defaults.set(favoriteArray, forKey: "favorites")
+            }
+        }
+    }
+    
 }
