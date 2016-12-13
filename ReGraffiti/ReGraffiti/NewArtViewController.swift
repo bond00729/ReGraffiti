@@ -79,7 +79,13 @@ class NewArtViewController: UIViewController {
     }
     
     @IBAction func openInAppleMaps(_ sender: AnyObject) {
-        
+        if current > -1 {
+            var url = location[current]
+            url = url.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
+            let str = "http://maps.apple.com/?address=" + url
+            print(str)
+            UIApplication.shared.openURL(NSURL(string: str)! as URL)
+        }
     }
     
     func updateImage() {
