@@ -32,7 +32,6 @@ class NewArtViewController: UIViewController {
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [Dictionary<String, AnyObject>]
                     
                     for art in parsedData  {
-                        
                         self.date.insert(art["date"] as! String, at: 0)
                         self.location.insert(art["location"] as! String, at: 0)
                         self.id.insert(art["id"] as! Int, at: 0)
@@ -46,7 +45,6 @@ class NewArtViewController: UIViewController {
                     print("Error loading data")
                 }
             }
-            
         }.resume()
     }
 
@@ -60,16 +58,23 @@ class NewArtViewController: UIViewController {
             current += 1;
  
         }
-        dateLabel.text = date[current]
-        locationLabel.text = location[current]
-        artImage.image = image[current]
+
+        updateImage()
     }
 
     @IBAction func previousImage(_ sender: UIBarButtonItem) {
         if current > 0 {
             current -= 1;
         }
-        dateLabel.text = date[current]
+
+        updateImage()
+    }
+    
+    @IBAction func openInAppleMaps(_ sender: AnyObject) {
+        
+    }
+    
+    func updateImage() {
         locationLabel.text = location[current]
         artImage.image = image[current]
     }
