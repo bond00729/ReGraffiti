@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32DE29751DFFE118000296C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DE29741DFFE118000296C7 /* LaunchScreen.storyboard */; };
 		C98F1DA91DFCCC5F00FEF1ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */; };
 		C98F1DB01DFCCC5F00FEF1ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */; };
 		C98F1DB21DFCCC5F00FEF1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */; };
-		C98F1DB51DFCCC5F00FEF1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */; };
 		C98F1DC01DFCCC5F00FEF1ED /* ReGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */; };
 		C98F1DCB1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DCA1DFCCC5F00FEF1ED /* ReGraffitiUITests.swift */; };
 		C98F1DE31DFE089400FEF1ED /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */; };
@@ -38,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32DE29741DFFE118000296C7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98F1DA51DFCCC5F00FEF1ED /* ReGraffiti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReGraffiti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98F1DA81DFCCC5F00FEF1ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98F1DAF1DFCCC5F00FEF1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C98F1DB41DFCCC5F00FEF1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98F1DB61DFCCC5F00FEF1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98F1DBB1DFCCC5F00FEF1ED /* ReGraffitiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReGraffitiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98F1DBF1DFCCC5F00FEF1ED /* ReGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGraffitiTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				C98F1DE21DFE089400FEF1ED /* CreatePostViewController.swift */,
 				C98F1DAE1DFCCC5F00FEF1ED /* Main.storyboard */,
 				C98F1DB11DFCCC5F00FEF1ED /* Assets.xcassets */,
-				C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */,
+				32DE29741DFFE118000296C7 /* LaunchScreen.storyboard */,
 				C98F1DB61DFCCC5F00FEF1ED /* Info.plist */,
 			);
 			path = ReGraffiti;
@@ -247,7 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98F1DB51DFCCC5F00FEF1ED /* LaunchScreen.storyboard in Resources */,
+				32DE29751DFFE118000296C7 /* LaunchScreen.storyboard in Resources */,
 				C98F1DB21DFCCC5F00FEF1ED /* Assets.xcassets in Resources */,
 				C98F1DB01DFCCC5F00FEF1ED /* Main.storyboard in Resources */,
 			);
@@ -321,14 +321,6 @@
 				C98F1DAF1DFCCC5F00FEF1ED /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C98F1DB31DFCCC5F00FEF1ED /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C98F1DB41DFCCC5F00FEF1ED /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
