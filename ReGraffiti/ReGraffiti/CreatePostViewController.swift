@@ -34,13 +34,12 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         if self.locationText.text != nil && self.imageView.image != nil {
             let imageData = UIImageJPEGRepresentation(imageView.image!, 0.5)
             let imageString = imageData?.base64EncodedString()
+            let urlEncoded = imageString?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             
-            print("imageString \(imageString)")
-            print("locationText.text \(locationText.text!)")
+            print("imageString \(urlEncoded)")
             
-            let urlString = "http://104.238.156.117:8081/image?data=\(imageString!)&location=\(locationText.text!)"
+            let urlString = "http://104.238.156.117:8081/create_image?image=\(urlEncoded!)&location=\(locationText.text!)"
             let url = URL(string: urlString)!
-            print("testingURL is \(url)")
             
             URLSession.shared.dataTask(with:url) { (data, response, error) in
                 if error != nil {

@@ -54,7 +54,7 @@ async def get_image_handler(request):
     cursor.execute('SELECT image FROM images WHERE rowid = ?', request.url.query['id'])
     result = cursor.fetchone()
 
-    return aiohttp.web.Response(body=base64.b64decode(result[0]), content_type='image/jpeg')
+    return aiohttp.web.Response(body=result[0], content_type='image/jpeg')
 
 application.router.add_route('GET', '/new_images', new_handler)
 application.router.add_route('GET', '/create_image', create_image_handler)
