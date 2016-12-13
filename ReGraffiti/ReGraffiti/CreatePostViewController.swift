@@ -27,26 +27,36 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func createPost(_ sender: UIBarButtonItem) {
-        print("self.image.image != null is \(self.imageView.image != nil)") // REMOVE
-        print("self.location.text != null is \(self.locationText.text != nil)") // REMOVE
+        let defaults = UserDefaults.standard
+        var myArtArray = defaults.array(forKey: "myArt")
+        
+        
         if self.locationText.text != nil && self.imageView.image != nil {
-            print("entered if")
-            let defaults = UserDefaults.standard
-            print(defaults)
-            var userImages = defaults.array(forKey: "user-images")! as [Any]
-            print(userImages)
-            var userLocation = defaults.array(forKey: "user-locations")! as [Any]
-            print(userLocation)
+            let imageData = UIImageJPEGRepresentation(imageView.image!, 0.5)
+            let imageString = imageData?.base64EncodedString()
             
-            userImages.insert(self.imageView.image!, at: 0)
-            userLocation.insert(self.locationText.text!, at: 0)
+            print("imageString \(imageString)")
+            print("locationText.text \(locationText.text!)")
             
-            print(userImages.count)
-            print(userLocation.count)
+            let urlString = "http://45.63.35.59:8081/image?data=\(imageString!)&location=\(locationText.text!)"
+            let url = URL(string: urlString)!
+            print("testingURL is \(url)")
             
-            defaults.set(userImages, forKey: "user-images")
-            defaults.set(userLocation, forKey: "user-locations")
+            URLSession.shared.dataTask(with:url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    do {
+                        let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                        print(parsedData)
+                    } catch {
+                        print("Error loading data")
+                    }
+                }
+            }.resume()
             
+            let dummy = 0
+            myArtArray?.append(dummy)
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -55,6 +65,11 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let defaults = UserDefaults.standard
+        if defaults.array(forKey: "myArt") == nil {
+            let myArtArray: [Int] = [Int]()
+            defaults.set(myArtArray, forKey: "myArt")
+        }
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
@@ -72,8 +87,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             let imagePicker = UIImagePickerController()
             
             imagePicker.delegate = self
-            imagePicker.sourceType =
-                UIImagePickerControllerSourceType.camera
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
             
@@ -115,16 +129,7 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self,
                                                #selector(CreatePostViewController.image(image:didFinishSavingWithError:contextInfo:)), nil)
-            } else if mediaType.isEqual(to: kUTTypeMovie as String) {
-                // Code to support video here
-                
-                /**
- 
-                TAKE THE CODE ABOVE THIS OUT
-                
-                **/
             }
-            
         }
     }
     

@@ -26,7 +26,7 @@ class YourArtTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // CHANGE SO IT ISNT JUST ONE ROW
+        // CHANGE SO IT ISNT JUST ONE ROW.. should be NSUserDefault(key: myArt).count
         return 1
     }
 
