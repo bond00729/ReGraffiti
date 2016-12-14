@@ -208,7 +208,7 @@
 				TargetAttributes = {
 					C98F1DA41DFCCC5E00FEF1ED = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ETMQ5VFD4P;
+						DevelopmentTeam = 9R88C436HD;
 						ProvisioningStyle = Automatic;
 					};
 					C98F1DBA1DFCCC5F00FEF1ED = {
@@ -427,11 +427,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				DEVELOPMENT_TEAM = 9R88C436HD;
 				INFOPLIST_FILE = ReGraffiti/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffiti;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yafunyaev.ReGraffiti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -441,11 +441,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ETMQ5VFD4P;
+				DEVELOPMENT_TEAM = 9R88C436HD;
 				INFOPLIST_FILE = ReGraffiti/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewBond.ReGraffiti;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yafunyaev.ReGraffiti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

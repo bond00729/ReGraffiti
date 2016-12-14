@@ -9,14 +9,14 @@
 import UIKit
 
 class YourArtTableViewController: UITableViewController {
-    var myArtArray = UserDefaults.standard.array(forKey: "myArt")
+    var myArtArray = UserDefaults.standard.object(forKey: "myArt") as? [Int]
     @IBOutlet var tb: UITableView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        self.myArtArray = UserDefaults.standard.array(forKey: "myArt")
+        self.myArtArray = UserDefaults.standard.object(forKey: "myArt") as? [Int]
         
     }
 
@@ -31,7 +31,12 @@ class YourArtTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(myArtArray!.count)
+        let defaults = UserDefaults.standard
+        if  defaults.object(forKey: "myArt") == nil {
+            let favoriteArray: [Int] = [Int]()
+            defaults.set(favoriteArray, forKey: "myArt")
+        }
+        myArtArray = UserDefaults.standard.object(forKey: "myArt") as? [Int]
         return myArtArray!.count
     }
 
@@ -53,7 +58,7 @@ class YourArtTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        myArtArray = UserDefaults.standard.array(forKey: "myArt")
+        myArtArray = UserDefaults.standard.array(forKey: "myArt") as? [Int]
         super.viewWillAppear(animated)
         tb.reloadData()
     }
