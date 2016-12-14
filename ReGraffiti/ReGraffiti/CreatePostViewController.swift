@@ -36,7 +36,10 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
             let imageString = imageData?.base64EncodedString(options: .init(rawValue: 0))
             let urlEncoded = imageString?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             
-            let urlString = "http://104.238.156.117:8081/create_image?image=\(urlEncoded!)&location=\(locationText.text!)"
+            let urlEncodedLocation = locationText.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            
+            let urlString = "http://104.238.156.117:8081/create_image?image=\(urlEncoded!)&location=\(urlEncodedLocation!)"
+            print("URL: " + urlString)
             let url = URL(string: urlString)!
             
             URLSession.shared.dataTask(with:url) { (data, response, error) in
