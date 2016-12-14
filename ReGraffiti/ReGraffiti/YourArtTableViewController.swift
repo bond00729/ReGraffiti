@@ -10,10 +10,13 @@ import UIKit
 
 class YourArtTableViewController: UITableViewController {
     var myArtArray = UserDefaults.standard.array(forKey: "myArt")
+    @IBOutlet var tb: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        self.myArtArray = UserDefaults.standard.array(forKey: "myArt")
         
     }
 
@@ -28,20 +31,30 @@ class YourArtTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // should be myArtArray.count
-        return 1
+        print(myArtArray!.count)
+        return myArtArray!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "yourArtCell", for: indexPath) as! YourArtCell
         
 
-        // Configure the cell...
-        // call JSON to get location/date using id from myArtArray
-        // call JSON to get image using id from myArtArray
-        cell.dateLabel.text = "12/12/2016"
-        cell.locationLabel.text = "Seattle"
-        cell.cellArt.image = #imageLiteral(resourceName: "launchbackground")
+        let n = (indexPath as NSIndexPath).row
+        
+        let urlBaseLink = "http://104.238.156.117:8081/image?id="
+        
+        if let url = NSURL(string: urlBaseLink + String(describing: (myArtArray?[n])!)) {
+            if let data = NSData(contentsOf: url as URL) {
+                cell.cellArt.image = UIImage(data: data as Data)
+            }
+        }
+        
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        myArtArray = UserDefaults.standard.array(forKey: "myArt")
+        super.viewWillAppear(animated)
+        tb.reloadData()
     }
 }

@@ -10,8 +10,6 @@ import UIKit
 
 class YourArtCell: UITableViewCell {
     @IBOutlet weak var cellArt: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

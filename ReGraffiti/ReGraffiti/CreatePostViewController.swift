@@ -28,15 +28,13 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func createPost(_ sender: UIBarButtonItem) {
         let defaults = UserDefaults.standard
-        var myArtArray = defaults.array(forKey: "myArt")
+        var myArtArray = defaults.object(forKey: "myArt") as! [Int]
         
         
         if self.locationText.text != nil && self.imageView.image != nil {
             let imageData = UIImageJPEGRepresentation(imageView.image!, 0.5)
             let imageString = imageData?.base64EncodedString(options: .init(rawValue: 0))
             let urlEncoded = imageString?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-            
-            print("imageString \(urlEncoded!)")
             
             let urlString = "http://104.238.156.117:8081/create_image?image=\(urlEncoded!)&location=\(locationText.text!)"
             let url = URL(string: urlString)!
@@ -46,16 +44,17 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
                     print(error!)
                 } else {
                     do {
-                        let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
-                        print(parsedData)
+                        print("before parsedData")
+                        let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, AnyObject>
+                        
+                        
+                        myArtArray.insert(parsedData["id"] as! Int, at: 0)
+                        defaults.set(myArtArray, forKey: "myArt")
                     } catch {
-                        print("Error loading data")
+                        print("Error loading the data")
                     }
                 }
             }.resume()
-            
-            let dummy = 0
-            myArtArray?.append(dummy)
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -153,15 +152,4 @@ class CreatePostViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
